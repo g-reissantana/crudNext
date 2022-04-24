@@ -5,7 +5,7 @@ export const showController = {
     async getContactById(id, navigate, setContact) {
         const response = await api.getContactById(id);
         const contact = await response[0];
-        if(contact == undefined) {
+        if(contact === undefined) {
             // navigate('/');
             return false;
         }

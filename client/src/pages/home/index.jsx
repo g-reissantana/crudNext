@@ -72,7 +72,7 @@ export const Home = () => {
                 <C.BoxContact>
                     {allContacts && listContacts()}
                 </C.BoxContact>
-                {allContacts.length == 1 && <C.ListVoidText>Nenhum contato Cadastrado</C.ListVoidText>}
+                {allContacts.length === 1 && <C.ListVoidText>Nenhum contato Cadastrado</C.ListVoidText>}
             </C.Container>
             {showBtnAdd &&
                 <C.AddContactBtn onClick={() => setShowModal(!showModal)}>

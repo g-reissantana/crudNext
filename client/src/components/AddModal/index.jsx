@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as C from './style';
 
-import { AiOutlineClose, AiOutlineUser, AiOutlineMail, AiOutlinePhone, AiOutlineInstagram, AiOutlineGithub, AiOutlineSave, AiOutlineEdit } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineUser, AiOutlineMail, AiOutlinePhone, AiOutlineInstagram, AiOutlineGithub, AiOutlineSave } from 'react-icons/ai';
 
 export const AddModal = ({addContact, showModal, setShowModal}) => {
 

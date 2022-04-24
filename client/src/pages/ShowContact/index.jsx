@@ -53,7 +53,7 @@ export const ShowContact = () => {
 
     const handleClickSubmit = async() => {
         for(const item in editValues) {
-            if(editValues[item] == '' || editValues[item] == undefined) {
+            if(editValues[item] === '' || editValues[item] === undefined) {
                 return alert('Por favor, preencha todos os campos!');
             };
         };
@@ -75,7 +75,7 @@ export const ShowContact = () => {
 
     return(
         <>
-            {editValues == undefined && <Loading/>}
+            {editValues === undefined && <Loading/>}
             <GlobalStyle/>
             <C.Container>
                 <C.ModalBox>
@@ -106,13 +106,13 @@ export const ShowContact = () => {
                                     <h1>{contact.email}</h1>
                                 </div>
                                 <div className="dataContact instagram">
-                                    <a target="_blank" href={`https://www.instagram.com/${contact.instagram}`}>
+                                    <a target="_blank" rel="noreferrer" href={`https://www.instagram.com/${contact.instagram}`}>
                                         <AiOutlineInstagram/>
                                         <h1>{contact.instagram}</h1>
                                     </a>
                                 </div>
                                 <div className="dataContact github">
-                                    <a target="_blank" href={`https://github.com/${contact.github}`}>
+                                    <a target="_blank" rel="noreferrer" href={`https://github.com/${contact.github}`}>
                                         <AiOutlineGithub/>
                                         <h1>{contact.github}</h1>
                                     </a>
