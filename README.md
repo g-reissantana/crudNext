@@ -14,15 +14,15 @@
   1. Change your mySQL database data `server/index.js`
   2. `$ cd server`
   3. `$ npm install` or `$ yarn`
-  4. `$ npm rum devStart`
+  4. `$ npm run devStart`
   
 ## Functionalities
 
-  + Create games in the database
-  + Read games in the database
-  + Update games in the database
-  + Delete games in the database
-  + Click card to edit and delete
+  + Create contacts in the database
+  + Read contacts in the database
+  + Update contacts in the database
+  + Delete contacts in the database
+  + Click button view to edit and delete
   
 ## Used Libraries
 
