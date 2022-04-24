@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import * as C from './style';
 
 import { AiOutlineClose, AiOutlineUser, AiOutlineMail, AiOutlinePhone, AiOutlineInstagram, AiOutlineGithub, AiOutlineSave, AiOutlineEdit } from 'react-icons/ai';
-import { BsArrowReturnLeft } from 'react-icons/bs';
-import { Avatar } from '../Avatar';
-import { Link } from 'react-router-dom';
 
 export const AddModal = ({addContact, showModal, setShowModal}) => {
 

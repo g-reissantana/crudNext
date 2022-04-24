@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import * as C from './style';
 
+// ICONS
 import { AiOutlineClose } from 'react-icons/ai';
-
 import { MdOutlineReadMore } from 'react-icons/md';
 import { MdOutlineDelete } from 'react-icons/md';
+
 import { Avatar } from '../Avatar';
-import { Link } from 'react-router-dom';
 
 export const ListItem = ({id, name, phone, github, deleteContact, setShowBtnAdd}) => {
 
@@ -31,16 +33,16 @@ export const ListItem = ({id, name, phone, github, deleteContact, setShowBtnAdd}
         setShowBtnAdd(showModalDelete);
     }
 
-    const handleClickDeleteConfirm = async() => {
-        await deleteItem();
-        setShowModalDelete(!showModalDelete);
-        setShowBtnAdd(showModalDelete);
-        window.location.replace('http://localhost:3000');
-    }
-
+    
     const handleClickCancel= () => {
         setShowModalDelete(!showModalDelete);
         setShowBtnAdd(showModalDelete);
+    }
+    
+    const handleClickDeleteConfirm = async() => {
+        await deleteItem();
+        await setShowModalDelete(!showModalDelete);
+        await setShowBtnAdd(showModalDelete);
     }
 
     const deleteItem = () => {
@@ -67,6 +69,7 @@ export const ListItem = ({id, name, phone, github, deleteContact, setShowBtnAdd}
                 </div>
             </C.ModalDelete>
             }
+
             <C.Container>
                 <C.Info>
                     <Avatar  width='6.8rem' height='6.8rem' src={`https://github.com/${github}.png`}/>
@@ -80,7 +83,7 @@ export const ListItem = ({id, name, phone, github, deleteContact, setShowBtnAdd}
                     <Link to={`showContact?id=${id}`}>
                         <MdOutlineReadMore title="Ver Contato" className="enter"/>
                     </Link>
-                    <MdOutlineDelete onClick={() => handleClickDelete()} title="Apagar Contato" className="delete"/>
+                    {id > 1 && <MdOutlineDelete onClick={() => handleClickDelete()} title="Apagar Contato" className="delete"/>}
                 </C.Actions>
             </C.Container>
             <C.Line />

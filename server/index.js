@@ -45,6 +45,8 @@ app.post('/addContact', (req, res) => {
     const {phone} = req.body;
     const {instagram} = req.body;
     const {github} = req.body;
+
+    console.log(id)
     
     let SQL = `INSERT INTO contacts (id, name, email, phone, instagram, github) VALUES (NULL, ?, ?, ?, ?, ?);`
 

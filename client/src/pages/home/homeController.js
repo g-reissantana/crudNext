@@ -4,7 +4,7 @@ export const homeController = {
     
     async getAllContacts(setAllContacts) {
         const response = await api.getAllContacts();
-        setAllContacts(response);
+        await setAllContacts(response);
         return response;
     },
     async deleteContact(id) {
